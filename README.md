@@ -4,9 +4,9 @@
 
 **Vefur:** https://taeceson.github.io/lokaverkefni-hreint/
 
-## Kennsluefni og dæmi
+## Hjálparsíður
 
-Hér eru hjálparsíður sem útskýra atriðin í kóðanum. Þær eru lesefni og dæmi til að prófa.
+Tenglar um form, töflur, útlit og JavaScript:
 
 | Efni | Hjálparsíða | Tengist þessu á vefnum |
 | --- | --- | --- |
@@ -22,13 +22,9 @@ Hér eru hjálparsíður sem útskýra atriðin í kóðanum. Þær eru lesefni 
 | function | [JavaScript Functions](https://www.w3schools.com/js/js_functions.asp) · [Prófa fall](https://www.w3schools.com/js/tryit.asp?filename=tryjs_function1) | Endurnýta nokkrar skipanir |
 | Smellir | [addEventListener](https://www.w3schools.com/jsref/met_element_addeventlistener.asp) | Smella á þema og flipa |
 | try og catch | [JavaScript Errors](https://www.w3schools.com/js/js_errors.asp) | Nota varaleið ef vafrinn leyfir ekki vistun |
-| Geymsla í vafra | [localStorage](https://www.w3schools.com/jsref/prop_win_localstorage.asp) | Þemaval og staðbundinn aðgangur |
+| Geymsla í vafra | [localStorage](https://www.w3schools.com/jsref/prop_win_localstorage.asp) | Þemaval |
 
-**JavaScript er annað tungumál en Java.** HTML lýsir efninu, CSS sér um útlitið og JavaScript bregst við aðgerðum.
-
-**try er ekki HTML-tag.** Það er JavaScript-skipun, stundum inni í `<script>` í HTML. Hún reynir að keyra kóða. `catch` bregst við ef villa kemur upp, til dæmis ef vafrinn bannar geymslu. W3Schools **Try it** hnappurinn er hins vegar ritill þar sem hægt er að prófa dæmi.
-
-**function er nafngreindur hópur skipana.** `updateThemeButton()` uppfærir þemahnappinn þegar kallað er á hana. Sjá fleiri stuttar útskýringar í [LESTU-MIG.md](LESTU-MIG.md).
+HTML sér um efnið, CSS um útlitið og JavaScript um smelli og leit. `function` er fall með nokkrum skipunum. `try/catch` grípur villur, t.d. þegar vafrinn leyfir ekki vistun. „Try it“ hjá W3Schools opnar dæmi sem hægt er að breyta.
 
 ## Síður
 
@@ -57,7 +53,7 @@ Topp 10 núna: heildartafla HLTV, 13. júlí til 13. október 2026, stórmót ge
 
 [Tölfræði með síum](https://www.hltv.org/stats/players?startDate=2026-07-13&endDate=2026-10-13&matchType=BigEvents&rankingFilter=Top20)
 
-Tíu mót: tíu nýjustu loknu alþjóðlegu LAN-mótin / Major-aðalmótin í HLTV-skrá með verðlaunapott að minnsta kosti 500.000 USD. Topp 10 hvers móts kemur úr heildartöflu þess með minnst 5 kort. Lið fylgja viðkomandi móti. Hlutverkalistar eru aðdáendamat; heimildir og aðferð fylgja vefnum og `gogn/spilarar.json`. Töflur og hlutverkalistar eru skrifuð beint í `spilarar.html`, svo ekki þarf JavaScript til að búa til efnið.
+Tíu mót: tíu nýjustu loknu alþjóðlegu LAN-mótin / Major-aðalmótin í HLTV-skrá með verðlaunapott að minnsta kosti 500.000 USD. Topp 10 hvers móts kemur úr heildartöflu þess með minnst 5 kort. Lið fylgja viðkomandi móti. Hlutverkalistar eru aðdáendamat; heimildir og aðferð fylgja vefnum. Töflur og hlutverkalistar eru skrifuð beint í `spilarar.html`, svo ekki þarf JavaScript til að búa til efnið.
 
 ## Keyra og breyta
 
@@ -67,7 +63,7 @@ Opna möppuna í Visual Studio Code og nota Live Server, eða:
 python3 -m http.server 5501
 ```
 
-Opna http://localhost:5501. Aðgangurinn er staðbundinn í vafranum. Lykilorð eru ekki geymd sem hreinn texti; geymt er salt og PBKDF2-afleiða. Raunverulegt aðgangskerfi yfir mörg tæki þarf bakenda.
+Opna http://localhost:5501. Innskráning og nýskráning eru útlitsdæmi og senda engin gögn.
 
 Texti, leikmannalistar og töflur eru í HTML-síðunum. JavaScript notar einföld ensk breytu- og fallanöfn; sýnilegur texti er íslenskur. CSS er í `css/` og sameinað með:
 
@@ -85,23 +81,6 @@ files_names = [
 ```
 
 Pico er sameinað við skrárnar í eina þjappaða `styles.min.css`, eina stílsíðuna sem HTML notar. Bil í `calc()` og leyfisathugasemd varðveitast. `gamalt.html` notar `<meta http-equiv="Refresh" content="5; url=index.html">` til að vísa á forsíðuna eftir fimm sekúndur.
-
-Upprunalega tilvísunardæmið:
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Refresh" content="5; url=https://www.w3schools.com">
-</head>
-<body>
-<p>Sorry! We have moved! The new URL is:
-<a href="https://www.w3schools.com">https://www.w3schools.com</a></p>
-<p>You will be redirected to the new address in five seconds.</p>
-<p>If you see this message for more than 5 seconds, please click on the link above!</p>
-</body>
-</html>
-```
 
 ## Myndir og myndband
 

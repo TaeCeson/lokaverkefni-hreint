@@ -14,8 +14,7 @@ for file_name in files_names:
         temp_data = file_handle.read()
         data = data + temp_data + "\n"
 
-# Þessar skrár innihalda ekki texta með CSS-táknum eða innfelld data-URL.
-# Bil í calc() eru varðveitt. /*! leyfisathugasemdir eru varðveittar líka.
+# Fjarlægja athugasemdir og óþörf bil. Leyfistexti fær að vera.
 data = re.sub(r"/\*(?!\!)[\s\S]*?\*/", "", data)
 data = re.sub(r"\s+", " ", data)
 data = re.sub(r"\s*([{}:;,])\s*", r"\1", data).strip()

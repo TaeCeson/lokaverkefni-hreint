@@ -1,7 +1,7 @@
 // Hjálp: https://www.w3schools.com/js/js_functions.asp
 // Smellur: https://www.w3schools.com/jsref/met_element_addeventlistener.asp
 
-// function safnar saman skipunum. Hér uppfærir hún þemahnappinn.
+// Þema
 var themeButton = document.getElementById('thema');
 function updateThemeButton() {
   if (document.documentElement.dataset.theme === 'dark') {
@@ -20,7 +20,7 @@ themeButton.addEventListener('click', function () {
   try {
     localStorage.setItem('cs-thema', theme);
   } catch (error) {
-    // Litirnir breytast samt þótt vafrinn leyfi ekki vistun.
+    // Vafrinn leyfir ekki vistun.
   }
   updateThemeButton();
 });
@@ -37,7 +37,7 @@ for (var link of mobileLinks) {
   });
 }
 
-// Svörin sjálf eru í HTML. Hér er aðeins valið hvaða svar sé sýnt.
+// Hjálparkassi
 document.getElementById('spjall-spurning').addEventListener('change', function () {
   var answers = document.querySelectorAll('[data-hjalp]');
   for (var answer of answers) answer.hidden = answer.dataset.hjalp !== this.value;

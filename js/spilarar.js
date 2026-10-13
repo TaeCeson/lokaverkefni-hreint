@@ -1,4 +1,4 @@
-// Töflur og leikmannanöfn eru í HTML, ekki búin til með JavaScript.
+// Flipar og leit
 // Hjálp: https://www.w3schools.com/jsref/met_element_addeventlistener.asp
 var playerButtons = document.querySelectorAll('[data-spilaraflipi]');
 var playerSections = document.querySelectorAll('[data-spilarakafli]');
