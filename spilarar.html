@@ -1,0 +1,1514 @@
+<!-- Hjálp: https://www.w3schools.com/html/ og https://www.w3schools.com/css/ -->
+<!DOCTYPE html>
+<html lang="is" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="CS Stúkan: Counter-Strike, LAN-mót og spilararnir á bak við leikinn.">
+  <title>Spilarar | CS Stúkan</title>
+  <link rel="icon" href="myndir/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.min.css">
+  <script src="js/thema.js">
+</script>
+  <script src="js/vefur.js" defer>
+</script>
+  <script src="js/spilarar.js" defer>
+</script>
+</head>
+<body>
+  <a class="sleppa" href="#efni">Fara beint í efnið</a>
+  <header class="siduhofud">
+    <div class="rammi haus">
+      <a class="merki" href="index.html">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="logo-titill">
+<title id="logo-titill">CS Stúkan - einfalt miða- og skotmarksmerki</title>
+<path d="M8 8h48v18a6 6 0 0 0 0 12v18H8V38a6 6 0 0 0 0-12Z" fill="#17232d" stroke="#f08a42" stroke-width="4"/>
+<circle cx="32" cy="32" r="11" fill="none" stroke="#e9c75a" stroke-width="3"/>
+<path d="M32 16v10m0 12v10M16 32h10m12 0h10" stroke="#7fb9aa" stroke-width="3"/>
+<circle cx="32" cy="32" r="2" fill="#f5f0e6"/>
+</svg>
+<span>CS STÚKAN<small>Counter-Strike · LAN · fólk</small>
+</span>
+</a>
+      <nav class="valmynd" aria-label="Aðalvalmynd">
+<a href="index.html">Forsíða</a>
+<a href="midar.html">Mót og miðar</a>
+<a href="spilarar.html" aria-current="page">Spilarar</a>
+<a href="godsagnir.html">Goðsagnir</a>
+<a href="adgangur.html">Aðgangur</a>
+</nav>
+      <button class="thema-hnappur" id="thema" type="button" aria-label="Skipta yfir í ljóst þema">☀ Ljóst</button>
+      <details class="farsima-valmynd">
+<summary>☰ Valmynd</summary>
+<nav class="farsima-listi" aria-label="Efnisyfirlit í farsíma">
+<a href="index.html">Forsíða</a>
+<a href="midar.html">Mót og miðar</a>
+<a href="spilarar.html" aria-current="page">Spilarar</a>
+<a href="godsagnir.html">Goðsagnir</a>
+<a href="adgangur.html">Aðgangur</a>
+<a href="um.html">Um verkefnið</a>
+</nav>
+</details>
+    </div>
+  </header>
+  <div class="tilkynning" role="region" aria-label="Tilkynningar">
+    <div class="tilkynning-braut">
+<div class="tilkynning-texti">
+      <span>● Finndu næsta LAN og miða hjá opinberum söluaðilum!</span>
+<span>LAN er betra með vinum - sjáumst í stúkunni!</span>
+<span>Vitality vann ESL Pro League S24, 3-0 gegn MOUZ.</span>
+      <span aria-hidden="true">● Finndu næsta LAN og miða hjá opinberum söluaðilum!</span>
+<span aria-hidden="true">LAN er betra með vinum - sjáumst í stúkunni!</span>
+<span aria-hidden="true">Vitality vann ESL Pro League S24, 3-0 gegn MOUZ.</span>
+    </div>
+</div>
+<button id="pasa-tilkynningu" type="button" aria-pressed="false">Pása</button>
+  </div>
+  <main id="efni" class="rammi">
+    
+<header class="sidutitill">
+<p class="yfirskrift">Tölur, hlutverk og smá skoðanir</p>
+<h1>Spilararnir í sviðsljósinu.</h1>
+<p>Heildarlistar byggja á tölum. Hlutverkalistar eru aðdáendaval. Gögnin eru tekin saman 13. október 2026.</p>
+</header>
+<nav class="flipar" aria-label="Velja spilaraefni">
+<button type="button" data-spilaraflipi="heild" aria-pressed="true">Topp 10 núna</button>
+<button type="button" data-spilaraflipi="mot" aria-pressed="false">Síðustu 10 mót</button>
+<button type="button" data-spilaraflipi="hlutverk" aria-pressed="false">Topp 5 eftir hlutverki</button>
+</nav>
+<section id="spilarar-heild" data-spilarakafli="heild">
+<h2>Topp 10 núna · stórmót gegn topp 20 liðum</h2>
+<p class="smatt">Heildartafla HLTV: stórmót, mótherjar í topp 20 og minnst 20 kort. Raðað eftir Rating 3.0. Jafnar einkunnir fá sama sæti. Þetta er röðun eftir þessum tölfræðisíum, ekki opinber árleg topp 20 verðlaunaröðun. Lið sýna tengingu á tímabilinu.</p>
+<label for="spilaraleit">Leita að spilara eða liði</label>
+<input class="leit" type="search" id="spilaraleit" placeholder="t.d. ZywOo eða Vitality">
+<div class="toflu-rammi">
+<table>
+<caption>13. júlí - 13. október 2026 · HLTV Rating 3.0</caption>
+<thead>
+<tr>
+<th scope="col">#</th>
+<th scope="col">Spilari</th>
+<th scope="col">Lið</th>
+<th scope="col">Rating</th>
+<th scope="col">Kort</th>
+</tr>
+</thead>
+<tbody id="heild-tafla">
+<tr>
+<td class="leikmanna-numer">1</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players/11893/zywoo?startDate=2026-07-13&amp;endDate=2026-10-13&amp;matchType=BigEvents&amp;rankingFilter=Top20" target="_blank" rel="noopener">ZywOo</a>
+</th>
+<td>Vitality</td>
+<td class="einkunn">1,38</td>
+<td>47</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">2</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players/19230/m0nesy?startDate=2026-07-13&amp;endDate=2026-10-13&amp;matchType=BigEvents&amp;rankingFilter=Top20" target="_blank" rel="noopener">m0NESY</a>
+</th>
+<td>Falcons</td>
+<td class="einkunn">1,33</td>
+<td>26</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">3</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players/21167/donk?startDate=2026-07-13&amp;endDate=2026-10-13&amp;matchType=BigEvents&amp;rankingFilter=Top20" target="_blank" rel="noopener">donk</a>
+</th>
+<td>Spirit</td>
+<td class="einkunn">1,32</td>
+<td>33</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">4</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players/15631/kscerato?startDate=2026-07-13&amp;endDate=2026-10-13&amp;matchType=BigEvents&amp;rankingFilter=Top20" target="_blank" rel="noopener">KSCERATO</a>
+</th>
+<td>FURIA</td>
+<td class="einkunn">1,19</td>
+<td>45</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">5</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players/16920/sh1ro?startDate=2026-07-13&amp;endDate=2026-10-13&amp;matchType=BigEvents&amp;rankingFilter=Top20" target="_blank" rel="noopener">sh1ro</a>
+</th>
+<td>Spirit</td>
+<td class="einkunn">1,17</td>
+<td>33</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">6</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players/20127/w0nderful?startDate=2026-07-13&amp;endDate=2026-10-13&amp;matchType=BigEvents&amp;rankingFilter=Top20" target="_blank" rel="noopener">w0nderful</a>
+</th>
+<td>Natus Vincere</td>
+<td class="einkunn">1,14</td>
+<td>27</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">6</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players/21243/wicadia?startDate=2026-07-13&amp;endDate=2026-10-13&amp;matchType=BigEvents&amp;rankingFilter=Top20" target="_blank" rel="noopener">Wicadia</a>
+</th>
+<td>Aurora</td>
+<td class="einkunn">1,14</td>
+<td>33</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">8</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players/24144/molodoy?startDate=2026-07-13&amp;endDate=2026-10-13&amp;matchType=BigEvents&amp;rankingFilter=Top20" target="_blank" rel="noopener">molodoy</a>
+</th>
+<td>FURIA</td>
+<td class="einkunn">1,13</td>
+<td>45</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">9</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players/16693/flamez?startDate=2026-07-13&amp;endDate=2026-10-13&amp;matchType=BigEvents&amp;rankingFilter=Top20" target="_blank" rel="noopener">flameZ</a>
+</th>
+<td>Vitality</td>
+<td class="einkunn">1,12</td>
+<td>47</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">9</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players/11816/ropz?startDate=2026-07-13&amp;endDate=2026-10-13&amp;matchType=BigEvents&amp;rankingFilter=Top20" target="_blank" rel="noopener">ropz</a>
+</th>
+<td>Vitality</td>
+<td class="einkunn">1,12</td>
+<td>47</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p id="leit-nidurstada" class="smatt" aria-live="polite">
+</p>
+<p class="heimild">
+<a href="https://www.hltv.org/stats/players?startDate=2026-07-13&amp;endDate=2026-10-13&amp;matchType=BigEvents&amp;rankingFilter=Top20">Heildartölfræði allra spilara á HLTV</a>
+</p>
+</section>
+<section id="spilarar-mot" data-spilarakafli="mot" hidden>
+<h2>Síðustu 10 stórmót · topp 10</h2>
+<p class="smatt">10 nýjustu loknu alþjóðlegu LAN-mótin og Major-aðalmótin í HLTV-viðburðaskrá með skráðan heildarverðlaunapott að minnsta kosti 500.000 USD. Undankeppnir og einstök fyrri Major-stig eru ekki sérstök mót hér. Raðað eftir lokadegi, síðan seinni upphafsdegi við jafnan lokadag; því kemur Atlanta á undan Astana (bæði luku 17. maí). Topp 10 úr heildartöflu HLTV fyrir hvert mót, raðað eftir Rating 3.0 með minnst 5 kort. Jafnar einkunnir fá sama sæti.</p>
+<label for="motaval">Veldu mót</label>
+<select id="motaval">
+<option value="0">ESL Pro League Season 24</option>
+<option value="1">StarLadder StarSeries Fall 2026</option>
+<option value="2">FISSURE Playground 3</option>
+<option value="3">BLAST Open Porto 2026</option>
+<option value="4">Esports World Cup 2026</option>
+<option value="5">BLAST Bounty 2026 Season 2 Finals</option>
+<option value="6">XSE Pro League Guangzhou 2026</option>
+<option value="7">IEM Cologne Major 2026</option>
+<option value="8">CS Asia Championships 2026</option>
+<option value="9">IEM Atlanta 2026</option>
+</select>
+<div data-motatafla="0">
+<h3>ESL Pro League Season 24</h3>
+<p class="smatt">3. október 2026 - 11. október 2026 · Katowice, Pólland</p>
+<p>
+<a href="https://www.hltv.org/stats/players?event=8244">Heildartölfræði mótsins á HLTV</a>
+</p>
+<div class="toflu-rammi">
+<table>
+<caption>Topp 10 á mótinu · minnst 5 kort</caption>
+<thead>
+<tr>
+<th scope="col">#</th>
+<th scope="col">Spilari</th>
+<th scope="col">Lið</th>
+<th scope="col">Rating</th>
+<th scope="col">Kort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="leikmanna-numer">1</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8244" target="_blank" rel="noopener">ZywOo</a>
+</th>
+<td>Vitality</td>
+<td class="einkunn">1,44</td>
+<td>16</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">2</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8244" target="_blank" rel="noopener">ropz</a>
+</th>
+<td>Vitality</td>
+<td class="einkunn">1,31</td>
+<td>16</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">3</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8244" target="_blank" rel="noopener">flameZ</a>
+</th>
+<td>Vitality</td>
+<td class="einkunn">1,30</td>
+<td>16</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">4</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8244" target="_blank" rel="noopener">m0NESY</a>
+</th>
+<td>Falcons</td>
+<td class="einkunn">1,28</td>
+<td>12</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">5</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8244" target="_blank" rel="noopener">Wicadia</a>
+</th>
+<td>Aurora</td>
+<td class="einkunn">1,23</td>
+<td>17</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">6</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8244" target="_blank" rel="noopener">donk</a>
+</th>
+<td>Spirit</td>
+<td class="einkunn">1,22</td>
+<td>19</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">6</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8244" target="_blank" rel="noopener">Spinx</a>
+</th>
+<td>MOUZ</td>
+<td class="einkunn">1,22</td>
+<td>14</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">8</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8244" target="_blank" rel="noopener">NiKo</a>
+</th>
+<td>Falcons</td>
+<td class="einkunn">1,21</td>
+<td>12</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">9</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8244" target="_blank" rel="noopener">w0nderful</a>
+</th>
+<td>Natus Vincere</td>
+<td class="einkunn">1,19</td>
+<td>13</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">10</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8244" target="_blank" rel="noopener">latto</a>
+</th>
+<td>Legacy</td>
+<td class="einkunn">1,18</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="smatt">80 raðir í heildartöflunni. Lið eru þau sem spilarinn keppti með á viðkomandi móti. Þetta er tölfræðiröðun, ekki MVP-val.</p>
+</div>
+<div data-motatafla="1" hidden>
+<h3>StarLadder StarSeries Fall 2026</h3>
+<p class="smatt">17. september 2026 - 20. september 2026 · Barcelona, Spánn</p>
+<p>
+<a href="https://www.hltv.org/stats/players?event=8057">Heildartölfræði mótsins á HLTV</a>
+</p>
+<div class="toflu-rammi">
+<table>
+<caption>Topp 10 á mótinu · minnst 5 kort</caption>
+<thead>
+<tr>
+<th scope="col">#</th>
+<th scope="col">Spilari</th>
+<th scope="col">Lið</th>
+<th scope="col">Rating</th>
+<th scope="col">Kort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="leikmanna-numer">1</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8057" target="_blank" rel="noopener">ZywOo</a>
+</th>
+<td>Vitality</td>
+<td class="einkunn">1,54</td>
+<td>13</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">2</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8057" target="_blank" rel="noopener">KSCERATO</a>
+</th>
+<td>FURIA</td>
+<td class="einkunn">1,27</td>
+<td>12</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">3</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8057" target="_blank" rel="noopener">w0nderful</a>
+</th>
+<td>Natus Vincere</td>
+<td class="einkunn">1,23</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">4</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8057" target="_blank" rel="noopener">insani</a>
+</th>
+<td>MIBR</td>
+<td class="einkunn">1,22</td>
+<td>10</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">5</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8057" target="_blank" rel="noopener">tomaszin</a>
+</th>
+<td>MIBR</td>
+<td class="einkunn">1,19</td>
+<td>10</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">6</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8057" target="_blank" rel="noopener">mo0N</a>
+</th>
+<td>magic</td>
+<td class="einkunn">1,16</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">6</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8057" target="_blank" rel="noopener">Jimpphat</a>
+</th>
+<td>Aurora</td>
+<td class="einkunn">1,16</td>
+<td>11</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">8</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8057" target="_blank" rel="noopener">xertioN</a>
+</th>
+<td>MOUZ</td>
+<td class="einkunn">1,14</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">9</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8057" target="_blank" rel="noopener">ropz</a>
+</th>
+<td>Vitality</td>
+<td class="einkunn">1,13</td>
+<td>13</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">10</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8057" target="_blank" rel="noopener">Wicadia</a>
+</th>
+<td>Aurora</td>
+<td class="einkunn">1,12</td>
+<td>11</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="smatt">40 raðir í heildartöflunni. Lið eru þau sem spilarinn keppti með á viðkomandi móti. Þetta er tölfræðiröðun, ekki MVP-val.</p>
+</div>
+<div data-motatafla="2" hidden>
+<h3>FISSURE Playground 3</h3>
+<p class="smatt">8. september 2026 - 13. september 2026 · Suzhou, Kína</p>
+<p>
+<a href="https://www.hltv.org/stats/players?event=8266">Heildartölfræði mótsins á HLTV</a>
+</p>
+<div class="toflu-rammi">
+<table>
+<caption>Topp 10 á mótinu · minnst 5 kort</caption>
+<thead>
+<tr>
+<th scope="col">#</th>
+<th scope="col">Spilari</th>
+<th scope="col">Lið</th>
+<th scope="col">Rating</th>
+<th scope="col">Kort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="leikmanna-numer">1</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8266" target="_blank" rel="noopener">cobrazera</a>
+</th>
+<td>The MongolZ</td>
+<td class="einkunn">1,37</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">2</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8266" target="_blank" rel="noopener">latto</a>
+</th>
+<td>Legacy</td>
+<td class="einkunn">1,34</td>
+<td>13</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">3</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8266" target="_blank" rel="noopener">Twistzz</a>
+</th>
+<td>FaZe</td>
+<td class="einkunn">1,27</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">3</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8266" target="_blank" rel="noopener">JamYoung</a>
+</th>
+<td>TYLOO</td>
+<td class="einkunn">1,27</td>
+<td>6</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">5</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8266" target="_blank" rel="noopener">NertZ</a>
+</th>
+<td>G2</td>
+<td class="einkunn">1,25</td>
+<td>19</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">6</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8266" target="_blank" rel="noopener">dgt</a>
+</th>
+<td>9z</td>
+<td class="einkunn">1,24</td>
+<td>7</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">7</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8266" target="_blank" rel="noopener">nqz</a>
+</th>
+<td>MIBR</td>
+<td class="einkunn">1,22</td>
+<td>12</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">8</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8266" target="_blank" rel="noopener">n1ssim</a>
+</th>
+<td>Legacy</td>
+<td class="einkunn">1,20</td>
+<td>13</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">8</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8266" target="_blank" rel="noopener">KSCERATO</a>
+</th>
+<td>FURIA</td>
+<td class="einkunn">1,20</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">8</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8266" target="_blank" rel="noopener">molodoy</a>
+</th>
+<td>FURIA</td>
+<td class="einkunn">1,20</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="smatt">80 raðir í heildartöflunni. Lið eru þau sem spilarinn keppti með á viðkomandi móti. Þetta er tölfræðiröðun, ekki MVP-val.</p>
+</div>
+<div data-motatafla="3" hidden>
+<h3>BLAST Open Porto 2026</h3>
+<p class="smatt">26. ágúst 2026 - 6. september 2026 · Kaupmannahöfn / Porto</p>
+<p>
+<a href="https://www.hltv.org/stats/players?event=8249">Heildartölfræði mótsins á HLTV</a>
+</p>
+<div class="toflu-rammi">
+<table>
+<caption>Topp 10 á mótinu · minnst 5 kort</caption>
+<thead>
+<tr>
+<th scope="col">#</th>
+<th scope="col">Spilari</th>
+<th scope="col">Lið</th>
+<th scope="col">Rating</th>
+<th scope="col">Kort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="leikmanna-numer">1</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8249" target="_blank" rel="noopener">donk</a>
+</th>
+<td>Spirit</td>
+<td class="einkunn">1,42</td>
+<td>12</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">2</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8249" target="_blank" rel="noopener">m0NESY</a>
+</th>
+<td>Falcons</td>
+<td class="einkunn">1,37</td>
+<td>13</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">3</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8249" target="_blank" rel="noopener">dem0n</a>
+</th>
+<td>FUT</td>
+<td class="einkunn">1,30</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">4</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8249" target="_blank" rel="noopener">Starry</a>
+</th>
+<td>Lynn Vision</td>
+<td class="einkunn">1,29</td>
+<td>6</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">4</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8249" target="_blank" rel="noopener">sh1ro</a>
+</th>
+<td>Spirit</td>
+<td class="einkunn">1,29</td>
+<td>12</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">6</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8249" target="_blank" rel="noopener">ZywOo</a>
+</th>
+<td>Vitality</td>
+<td class="einkunn">1,24</td>
+<td>14</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">7</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8249" target="_blank" rel="noopener">KSCERATO</a>
+</th>
+<td>FURIA</td>
+<td class="einkunn">1,22</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">8</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8249" target="_blank" rel="noopener">xelex</a>
+</th>
+<td>MOUZ</td>
+<td class="einkunn">1,21</td>
+<td>13</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">9</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8249" target="_blank" rel="noopener">tN1R</a>
+</th>
+<td>Spirit</td>
+<td class="einkunn">1,20</td>
+<td>12</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">10</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8249" target="_blank" rel="noopener">dumau</a>
+</th>
+<td>Legacy</td>
+<td class="einkunn">1,18</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="smatt">80 raðir í heildartöflunni. Lið eru þau sem spilarinn keppti með á viðkomandi móti. Þetta er tölfræðiröðun, ekki MVP-val.</p>
+</div>
+<div data-motatafla="4" hidden>
+<h3>Esports World Cup 2026</h3>
+<p class="smatt">12. ágúst 2026 - 23. ágúst 2026 · París, Frakkland</p>
+<p>
+<a href="https://www.hltv.org/stats/players?event=8261">Heildartölfræði mótsins á HLTV</a>
+</p>
+<div class="toflu-rammi">
+<table>
+<caption>Topp 10 á mótinu · minnst 5 kort</caption>
+<thead>
+<tr>
+<th scope="col">#</th>
+<th scope="col">Spilari</th>
+<th scope="col">Lið</th>
+<th scope="col">Rating</th>
+<th scope="col">Kort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="leikmanna-numer">1</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8261" target="_blank" rel="noopener">m0NESY</a>
+</th>
+<td>Falcons</td>
+<td class="einkunn">1,56</td>
+<td>7</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">2</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8261" target="_blank" rel="noopener">donk</a>
+</th>
+<td>Spirit</td>
+<td class="einkunn">1,53</td>
+<td>17</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">3</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8261" target="_blank" rel="noopener">xKacpersky</a>
+</th>
+<td>Ninjas in Pyjamas</td>
+<td class="einkunn">1,44</td>
+<td>6</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">4</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8261" target="_blank" rel="noopener">ZywOo</a>
+</th>
+<td>Vitality</td>
+<td class="einkunn">1,36</td>
+<td>11</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">5</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8261" target="_blank" rel="noopener">Jame</a>
+</th>
+<td>PARIVISION</td>
+<td class="einkunn">1,29</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">5</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8261" target="_blank" rel="noopener">tenzy</a>
+</th>
+<td>magic</td>
+<td class="einkunn">1,29</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">7</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8261" target="_blank" rel="noopener">try</a>
+</th>
+<td>Legacy</td>
+<td class="einkunn">1,28</td>
+<td>14</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">8</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8261" target="_blank" rel="noopener">nqz</a>
+</th>
+<td>MIBR</td>
+<td class="einkunn">1,27</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">9</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8261" target="_blank" rel="noopener">HUASOPEEK</a>
+</th>
+<td>9z</td>
+<td class="einkunn">1,24</td>
+<td>7</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">10</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8261" target="_blank" rel="noopener">flameZ</a>
+</th>
+<td>Vitality</td>
+<td class="einkunn">1,23</td>
+<td>11</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="smatt">160 raðir í heildartöflunni. Lið eru þau sem spilarinn keppti með á viðkomandi móti. Þetta er tölfræðiröðun, ekki MVP-val.</p>
+</div>
+<div data-motatafla="5" hidden>
+<h3>BLAST Bounty 2026 Season 2 Finals</h3>
+<p class="smatt">30. júlí 2026 - 2. ágúst 2026 · Malta</p>
+<p>
+<a href="https://www.hltv.org/stats/players?event=8247">Heildartölfræði mótsins á HLTV</a>
+</p>
+<div class="toflu-rammi">
+<table>
+<caption>Topp 10 á mótinu · minnst 5 kort</caption>
+<thead>
+<tr>
+<th scope="col">#</th>
+<th scope="col">Spilari</th>
+<th scope="col">Lið</th>
+<th scope="col">Rating</th>
+<th scope="col">Kort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="leikmanna-numer">1</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8247" target="_blank" rel="noopener">torzsi</a>
+</th>
+<td>MOUZ</td>
+<td class="einkunn">1,24</td>
+<td>10</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">2</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8247" target="_blank" rel="noopener">Spinx</a>
+</th>
+<td>MOUZ</td>
+<td class="einkunn">1,20</td>
+<td>10</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">3</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8247" target="_blank" rel="noopener">donk</a>
+</th>
+<td>Spirit</td>
+<td class="einkunn">1,16</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">4</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8247" target="_blank" rel="noopener">Staehr</a>
+</th>
+<td>Astralis</td>
+<td class="einkunn">1,14</td>
+<td>6</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">5</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8247" target="_blank" rel="noopener">xelex</a>
+</th>
+<td>MOUZ</td>
+<td class="einkunn">1,07</td>
+<td>10</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">5</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8247" target="_blank" rel="noopener">sh1ro</a>
+</th>
+<td>Spirit</td>
+<td class="einkunn">1,07</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">7</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8247" target="_blank" rel="noopener">phzy</a>
+</th>
+<td>Astralis</td>
+<td class="einkunn">1,05</td>
+<td>6</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">7</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8247" target="_blank" rel="noopener">PR</a>
+</th>
+<td>MOUZ</td>
+<td class="einkunn">1,05</td>
+<td>10</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">7</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8247" target="_blank" rel="noopener">jabbi</a>
+</th>
+<td>Astralis</td>
+<td class="einkunn">1,05</td>
+<td>6</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">10</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8247" target="_blank" rel="noopener">jcobbb</a>
+</th>
+<td>FaZe</td>
+<td class="einkunn">1,04</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="smatt">40 raðir í heildartöflunni. Lið eru þau sem spilarinn keppti með á viðkomandi móti. Þetta er tölfræðiröðun, ekki MVP-val.</p>
+</div>
+<div data-motatafla="6" hidden>
+<h3>XSE Pro League Guangzhou 2026</h3>
+<p class="smatt">1. júlí 2026 - 12. júlí 2026 · Guangzhou, Kína</p>
+<p>
+<a href="https://www.hltv.org/stats/players?event=8914">Heildartölfræði mótsins á HLTV</a>
+</p>
+<div class="toflu-rammi">
+<table>
+<caption>Topp 10 á mótinu · minnst 5 kort</caption>
+<thead>
+<tr>
+<th scope="col">#</th>
+<th scope="col">Spilari</th>
+<th scope="col">Lið</th>
+<th scope="col">Rating</th>
+<th scope="col">Kort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="leikmanna-numer">1</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8914" target="_blank" rel="noopener">Magnojez</a>
+</th>
+<td>BETBOOM</td>
+<td class="einkunn">1,44</td>
+<td>7</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">2</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8914" target="_blank" rel="noopener">frozen</a>
+</th>
+<td>FaZe</td>
+<td class="einkunn">1,29</td>
+<td>14</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">3</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8914" target="_blank" rel="noopener">insani</a>
+</th>
+<td>MIBR</td>
+<td class="einkunn">1,25</td>
+<td>8</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">3</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8914" target="_blank" rel="noopener">Jee</a>
+</th>
+<td>TYLOO</td>
+<td class="einkunn">1,25</td>
+<td>7</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">5</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8914" target="_blank" rel="noopener">Twistzz</a>
+</th>
+<td>FaZe</td>
+<td class="einkunn">1,20</td>
+<td>14</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">5</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8914" target="_blank" rel="noopener">Sdaim</a>
+</th>
+<td>Nemesis</td>
+<td class="einkunn">1,20</td>
+<td>11</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">5</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8914" target="_blank" rel="noopener">Zero</a>
+</th>
+<td>TYLOO</td>
+<td class="einkunn">1,20</td>
+<td>7</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">8</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8914" target="_blank" rel="noopener">HUASOPEEK</a>
+</th>
+<td>9z</td>
+<td class="einkunn">1,19</td>
+<td>16</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">8</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8914" target="_blank" rel="noopener">JBOEN</a>
+</th>
+<td>FaZe</td>
+<td class="einkunn">1,19</td>
+<td>14</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">8</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8914" target="_blank" rel="noopener">sjuush</a>
+</th>
+<td>Ninjas in Pyjamas</td>
+<td class="einkunn">1,19</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="smatt">80 raðir í heildartöflunni. Lið eru þau sem spilarinn keppti með á viðkomandi móti. Þetta er tölfræðiröðun, ekki MVP-val.</p>
+</div>
+<div data-motatafla="7" hidden>
+<h3>IEM Cologne Major 2026</h3>
+<p class="smatt">11. júní 2026 - 21. júní 2026 · Köln, Þýskaland</p>
+<p>
+<a href="https://www.hltv.org/stats/players?event=8301">Heildartölfræði mótsins á HLTV</a>
+</p>
+<div class="toflu-rammi">
+<table>
+<caption>Topp 10 á mótinu · minnst 5 kort</caption>
+<thead>
+<tr>
+<th scope="col">#</th>
+<th scope="col">Spilari</th>
+<th scope="col">Lið</th>
+<th scope="col">Rating</th>
+<th scope="col">Kort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="leikmanna-numer">1</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8301" target="_blank" rel="noopener">ZywOo</a>
+</th>
+<td>Vitality</td>
+<td class="einkunn">1,45</td>
+<td>14</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">2</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8301" target="_blank" rel="noopener">donk</a>
+</th>
+<td>Spirit</td>
+<td class="einkunn">1,36</td>
+<td>14</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">3</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8301" target="_blank" rel="noopener">m0NESY</a>
+</th>
+<td>Falcons</td>
+<td class="einkunn">1,27</td>
+<td>20</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">3</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8301" target="_blank" rel="noopener">HeavyGod</a>
+</th>
+<td>G2</td>
+<td class="einkunn">1,27</td>
+<td>16</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">5</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8301" target="_blank" rel="noopener">Wicadia</a>
+</th>
+<td>Aurora</td>
+<td class="einkunn">1,26</td>
+<td>13</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">6</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8301" target="_blank" rel="noopener">NiKo</a>
+</th>
+<td>Falcons</td>
+<td class="einkunn">1,25</td>
+<td>20</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">7</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8301" target="_blank" rel="noopener">sh1ro</a>
+</th>
+<td>Spirit</td>
+<td class="einkunn">1,24</td>
+<td>14</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">8</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8301" target="_blank" rel="noopener">molodoy</a>
+</th>
+<td>FURIA</td>
+<td class="einkunn">1,22</td>
+<td>15</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">9</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8301" target="_blank" rel="noopener">YEKINDAR</a>
+</th>
+<td>FURIA</td>
+<td class="einkunn">1,18</td>
+<td>15</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">9</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8301" target="_blank" rel="noopener">yuurih</a>
+</th>
+<td>FURIA</td>
+<td class="einkunn">1,18</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="smatt">80 raðir í heildartöflunni. Lið eru þau sem spilarinn keppti með á viðkomandi móti. Þetta er tölfræðiröðun, ekki MVP-val.</p>
+</div>
+<div data-motatafla="8" hidden>
+<h3>CS Asia Championships 2026</h3>
+<p class="smatt">20. maí 2026 - 24. maí 2026 · Shanghai, Kína</p>
+<p>
+<a href="https://www.hltv.org/stats/players?event=8263">Heildartölfræði mótsins á HLTV</a>
+</p>
+<div class="toflu-rammi">
+<table>
+<caption>Topp 10 á mótinu · minnst 5 kort</caption>
+<thead>
+<tr>
+<th scope="col">#</th>
+<th scope="col">Spilari</th>
+<th scope="col">Lið</th>
+<th scope="col">Rating</th>
+<th scope="col">Kort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="leikmanna-numer">1</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8263" target="_blank" rel="noopener">insani</a>
+</th>
+<td>MIBR</td>
+<td class="einkunn">1,44</td>
+<td>10</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">2</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8263" target="_blank" rel="noopener">latto</a>
+</th>
+<td>Legacy</td>
+<td class="einkunn">1,31</td>
+<td>14</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">2</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8263" target="_blank" rel="noopener">xertioN</a>
+</th>
+<td>MOUZ</td>
+<td class="einkunn">1,31</td>
+<td>16</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">4</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8263" target="_blank" rel="noopener">Jame</a>
+</th>
+<td>PARIVISION</td>
+<td class="einkunn">1,28</td>
+<td>7</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">5</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8263" target="_blank" rel="noopener">910</a>
+</th>
+<td>The MongolZ</td>
+<td class="einkunn">1,27</td>
+<td>12</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">6</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8263" target="_blank" rel="noopener">kyousuke</a>
+</th>
+<td>Falcons</td>
+<td class="einkunn">1,24</td>
+<td>12</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">7</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8263" target="_blank" rel="noopener">npl</a>
+</th>
+<td>B8</td>
+<td class="einkunn">1,21</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">8</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8263" target="_blank" rel="noopener">m0NESY</a>
+</th>
+<td>Falcons</td>
+<td class="einkunn">1,20</td>
+<td>12</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">9</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8263" target="_blank" rel="noopener">Moseyuh</a>
+</th>
+<td>TYLOO</td>
+<td class="einkunn">1,19</td>
+<td>6</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">9</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8263" target="_blank" rel="noopener">xelex</a>
+</th>
+<td>MOUZ</td>
+<td class="einkunn">1,19</td>
+<td>16</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="smatt">82 raðir í heildartöflunni. Lið eru þau sem spilarinn keppti með á viðkomandi móti. Þetta er tölfræðiröðun, ekki MVP-val.</p>
+</div>
+<div data-motatafla="9" hidden>
+<h3>IEM Atlanta 2026</h3>
+<p class="smatt">11. maí 2026 - 17. maí 2026 · Atlanta, Bandaríkin</p>
+<p>
+<a href="https://www.hltv.org/stats/players?event=8243">Heildartölfræði mótsins á HLTV</a>
+</p>
+<div class="toflu-rammi">
+<table>
+<caption>Topp 10 á mótinu · minnst 5 kort</caption>
+<thead>
+<tr>
+<th scope="col">#</th>
+<th scope="col">Spilari</th>
+<th scope="col">Lið</th>
+<th scope="col">Rating</th>
+<th scope="col">Kort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="leikmanna-numer">1</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8243" target="_blank" rel="noopener">latto</a>
+</th>
+<td>Legacy</td>
+<td class="einkunn">1,34</td>
+<td>12</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">2</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8243" target="_blank" rel="noopener">w0nderful</a>
+</th>
+<td>Natus Vincere</td>
+<td class="einkunn">1,33</td>
+<td>16</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">3</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8243" target="_blank" rel="noopener">Kvem</a>
+</th>
+<td>Passion UA</td>
+<td class="einkunn">1,30</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">4</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8243" target="_blank" rel="noopener">ZywOo</a>
+</th>
+<td>Vitality</td>
+<td class="einkunn">1,29</td>
+<td>12</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">5</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8243" target="_blank" rel="noopener">dem0n</a>
+</th>
+<td>FUT</td>
+<td class="einkunn">1,26</td>
+<td>7</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">6</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8243" target="_blank" rel="noopener">b1t</a>
+</th>
+<td>Natus Vincere</td>
+<td class="einkunn">1,24</td>
+<td>16</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">7</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8243" target="_blank" rel="noopener">frozen</a>
+</th>
+<td>FaZe</td>
+<td class="einkunn">1,22</td>
+<td>6</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">7</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8243" target="_blank" rel="noopener">dumau</a>
+</th>
+<td>Legacy</td>
+<td class="einkunn">1,22</td>
+<td>12</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">9</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8243" target="_blank" rel="noopener">dziugss</a>
+</th>
+<td>FUT</td>
+<td class="einkunn">1,20</td>
+<td>7</td>
+</tr>
+<tr>
+<td class="leikmanna-numer">9</td>
+<th scope="row">
+<a href="https://www.hltv.org/stats/players?event=8243" target="_blank" rel="noopener">REZ</a>
+</th>
+<td>GamerLegion</td>
+<td class="einkunn">1,20</td>
+<td>19</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="smatt">80 raðir í heildartöflunni. Lið eru þau sem spilarinn keppti með á viðkomandi móti. Þetta er tölfræðiröðun, ekki MVP-val.</p>
+</div>
+</section>
+<section id="spilarar-hlutverk" data-spilarakafli="hlutverk" hidden>
+<h2>Topp 5 eftir hlutverki</h2>
+<p class="smatt">Aðdáendaval, ekki opinber HLTV-röðun. Lið eru sannreynd 13. október 2026. Spilarar geta gegnt fleiri en einu hlutverki.</p>
+<div class="tveir-dalkar" id="hlutverkakort">
+<article>
+<h3>Riffilspilarar</h3>
+<ol class="hlutverka-listi">
+<li>
+<a href="https://www.hltv.org/player/21167/donk">donk</a>
+<small>Spirit</small>
+</li>
+<li>
+<a href="https://www.hltv.org/player/3741/niko">NiKo</a>
+<small>Falcons</small>
+</li>
+<li>
+<a href="https://www.hltv.org/player/15631/kscerato">KSCERATO</a>
+<small>FURIA</small>
+</li>
+<li>
+<a href="https://www.hltv.org/player/11816/ropz">ropz</a>
+<small>Vitality</small>
+</li>
+<li>
+<a href="https://www.hltv.org/player/16693/flamez">flameZ</a>
+<small>Vitality</small>
+</li>
+</ol>
+</article>
+<article>
+<h3>AWP-spilarar</h3>
+<ol class="hlutverka-listi">
+<li>
+<a href="https://www.hltv.org/player/11893/zywoo">ZywOo</a>
+<small>Vitality</small>
+</li>
+<li>
+<a href="https://www.hltv.org/player/19230/m0nesy">m0NESY</a>
+<small>Falcons</small>
+</li>
+<li>
+<a href="https://www.hltv.org/player/16920/sh1ro">sh1ro</a>
+<small>Spirit</small>
+</li>
+<li>
+<a href="https://www.hltv.org/player/24144/molodoy">molodoy</a>
+<small>FURIA</small>
+</li>
+<li>
+<a href="https://www.hltv.org/player/18072/torzsi">torzsi</a>
+<small>MOUZ</small>
+</li>
+</ol>
+</article>
+<article>
+<h3>Svæðisverðir</h3>
+<ol class="hlutverka-listi">
+<li>
+<a href="https://www.hltv.org/player/18462/mezii">mezii</a>
+<small>Vitality</small>
+</li>
+<li>
+<a href="https://www.hltv.org/player/18850/jimpphat">Jimpphat</a>
+<small>Aurora</small>
+</li>
+<li>
+<a href="https://www.hltv.org/player/20447/heavygod">HeavyGod</a>
+<small>G2</small>
+</li>
+<li>
+<a href="https://www.hltv.org/player/12018/teses">TeSeS</a>
+<small>Falcons</small>
+</li>
+<li>
+<a href="https://www.hltv.org/player/20423/zont1x">zont1x</a>
+<small>Spirit</small>
+</li>
+</ol>
+</article>
+<article>
+<h3>Leikstjórnendur</h3>
+<ol class="hlutverka-listi">
+<li>
+<a href="https://www.hltv.org/player/7322/apex">apEX</a>
+<small>Vitality</small>
+</li>
+<li>
+<a href="https://www.hltv.org/player/429/karrigan">karrigan</a>
+<small>Falcons</small>
+</li>
+<li>
+<a href="https://www.hltv.org/player/18317/magixx">magixx</a>
+<small>Spirit</small>
+</li>
+<li>
+<a href="https://www.hltv.org/player/9816/aleksib">Aleksib</a>
+<small>Natus Vincere</small>
+</li>
+<li>
+<a href="https://www.hltv.org/player/19677/kyxsan">kyxsan</a>
+<small>Aurora</small>
+</li>
+</ol>
+</article>
+</div>
+</section>
+<section class="kafli spurningar">
+<h2>Hvað þýða hlutverkin?</h2>
+<details>
+<summary>Rifler - riffilspilari</summary>
+<p>Spilar aðallega með AK-47, M4 eða öðrum rifflum. Getur opnað umferðir, lurkað eða stutt liðsfélaga.</p>
+</details>
+<details>
+<summary>AWPer - leyniskytta</summary>
+<p>Notar AWP og leitar að fyrstu fellunni eða heldur mikilvægu sjónarhorni.</p>
+</details>
+<details>
+<summary>Anchor - vörn á sprengjusvæði</summary>
+<p>Heldur oft svæði með lítinn stuðning. Þolinmæði, staðsetning og góð notkun handsprengja skipta máli.</p>
+</details>
+<details>
+<summary>IGL - leikstjórnandi</summary>
+<p>In-game leader ákveður aðferðir og kallar breytingar á meðan umferðin er spiluð. Rating segir ekki alla söguna um IGL.</p>
+</details>
+</section>
+<noscript>
+<p>Spilaranöfnin og tölurnar eru í HTML. Virkjaðu JavaScript til að skipta um flipa og mót.</p>
+</noscript>
+  </main>
+  <footer>
+<div class="rammi fotur">
+<div>
+<strong>CS Stúkan</strong>
+<p class="smatt">Counter-Strike · 2026</p>
+</div>
+<div>
+<a href="um.html">Um verkefnið og heimildir</a>
+<p class="smatt">Fréttir, spilarar og mót.</p>
+</div>
+</div>
+</footer>
+  <details class="spjall">
+<summary>Hjálp?</summary>
+<div class="spjall-inni">
+<h3>Hvað viltu vita?</h3>
+<p>Hér finnurðu svör um miða, aðgang og tölfræði.</p>
+<label for="spjall-spurning">Veldu spurningu</label>
+<select id="spjall-spurning">
+<option value="midar">Hvernig kaupi ég miða?</option>
+<option value="adgangur">Hvernig stofna ég aðgang?</option>
+<option value="tolur">Hvaðan koma tölurnar?</option>
+</select>
+<div aria-live="polite">
+<p data-hjalp="midar">Veldu „Velja miða“ á mótasíðunni. Miðakaup fara fram hjá opinberum söluaðila.</p>
+<p data-hjalp="adgangur" hidden>Farðu í „Aðgangur“ og veldu „Stofna aðgang“. Aðgangurinn vistast í þessum vafra.</p>
+<p data-hjalp="tolur" hidden>Tölurnar koma frá HLTV. Heimild og afmörkun fylgja listunum á spilara­síðunni.</p>
+</div>
+</div>
+</details>
+</body>
+</html>
